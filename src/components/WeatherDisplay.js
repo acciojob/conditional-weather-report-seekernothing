@@ -11,7 +11,8 @@ const WeatherDisplay = ({ weather }) => {
   return (
     <div>
       <p>
-        Temperature: <span style={style}>{temperature}</span> {/* Removed °C */}
+        Temperature: <span style={style}>{temperature}</span>{" "}
+        {/* No extra space here */}
       </p>
       <p>Condition: {condition}</p>
     </div>
