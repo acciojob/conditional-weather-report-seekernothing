@@ -3,7 +3,7 @@ import React from "react";
 const WeatherDisplay = ({ weather }) => {
   const { temperature, condition } = weather;
   const style = {
-    color: temperature > 20 ? "red" : "blue", // Lowercase color
+    color: temperature > 20 ? "red" : "blue",
     fontSize: "24px",
     fontWeight: "bold",
   };
@@ -12,9 +12,9 @@ const WeatherDisplay = ({ weather }) => {
     <div>
       <p>
         Temperature: <span style={style}>{temperature}</span>°C{" "}
-        {/* Fixed space issue */}
+        {/* Moved °C outside */}
       </p>
-      <p>Condition: {condition}</p> {/* Removed extra span */}
+      <p>Condition: {condition}</p>
     </div>
   );
 };
