@@ -1,23 +1,18 @@
-import React, { useEffect, useState } from "react";
-import "./../styles/App.css";
-import WeatherDisplay from "./WeatherDisplay";
 
+import React from "react";
+import './../styles/App.css';
+import WeatchDisplay from "./WeatherDisplay"
 const App = () => {
-  //Initialize weather state
-  const [weather, setWeather] = useState({ temperature: 0, condition: "" });
+  const [data,setData] = React.useState(null)
 
-  //Set the default weather
-  useEffect(() => {
-    setWeather({ temperature: 25, condition: "Sunny" });
-  }, []);
-
+  React.useEffect(()=>{
+  setData({ temperature: 25, conditions: "Sunny" })
+},[])
   return (
     <div>
-      {/* Do not remove the main div */}
-      <h2>Weather Application</h2>
-      <WeatherDisplay weather={weather} />
+    {data&&  <WeatchDisplay data={data}/>}
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
